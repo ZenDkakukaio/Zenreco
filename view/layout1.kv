@@ -1,0 +1,87 @@
+<TooltipIconButton@MDIconButton+MDTooltip>
+
+<MyLayout>:
+    Screen:
+        name: "sc1"
+        id: id_sc1
+        size_hint: None, None
+        size: root.width, root.height
+
+
+        MDScreen:
+            size_hint: None, None
+            size: id_sc1.width, id_sc1.height
+            md_bg_color: 17/255, 115/255, 95/255, 1
+            pos_hint: {"center_x": .5, "center_y": .5}
+
+            Image:
+                size_hint: None, None
+                size: dp(150), dp(150)
+                pos_hint: {"center_x": .1, "center_y": .95}
+                source: root.data_logo
+
+
+            Image:
+                size_hint: None, None
+                size: dp(350), dp(350)
+                pos_hint: {"center_x": .5, "center_y": .65}
+                source: root.data_text
+
+
+            Image:
+                size_hint: None, None
+                size: dp(700), dp(700)
+                pos_hint: {"center_x": .5, "center_y": .2}
+                source: root.data_menu
+
+
+            TooltipIconButton:
+                id: id_icon_button_voice
+                icon: "microphone"
+                #user_font_size: "90sp"
+                tooltip_text: "Contrôle par la voix"
+                theme_text_color: "Custom"
+                text_color: 1,1 ,1, .75
+                pos_hint: {"center_x": .25, "center_y": .42}
+                on_release: root.send_voice(id_icon_button_voice)
+                size_hint: None, None
+                size: dp(100), dp(100)
+                md_bg_color: 0, 0, 0, .65
+
+
+
+            TooltipIconButton:
+                id: id_icon_button_gesture
+                icon: "allergy"
+                #user_font_size: "90sp"
+                tooltip_text: "Contrôle par les signes des mains"
+                theme_text_color: "Custom"
+                text_color: 1,1 ,1, .75
+                pos_hint: {"center_x": .75, "center_y": .42}
+                on_release: root.send_gesture(id_icon_button_gesture)
+                size: dp(100), dp(100)
+                md_bg_color: 0, 0, 0, .65
+
+
+
+
+
+            TooltipIconButton:
+                id: id_icon_button_menu
+                icon: "menu"
+                #user_font_size: "90sp"
+                tooltip_text: "Accès au code source ou à l'extinction du programme"
+                theme_text_color: "Custom"
+                text_color: 1,1 ,1, .75
+                pos_hint: {"center_x": .95, "center_y": .95}
+                on_release: root.open_menu()
+
+
+
+
+
+
+
+
+
+

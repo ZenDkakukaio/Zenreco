@@ -1,0 +1,18 @@
+{
+  "logo":
+  {
+    "media1": "media/logo zenreco.png"
+  },
+  "text":
+  {
+    "media2": "media/text.png"
+  },
+  "menu":
+  {
+    "media3": "media/menu.png"
+  },
+  "click":
+  {
+    "media4": "media/sound/click.wav"
+  }
+}
